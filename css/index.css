@@ -177,9 +177,14 @@ nav .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 800px;
+  width: 100%;
   margin: auto;
   padding: 25px 0;
+}
+@media (max-width: 500px) {
+  nav .navbar {
+    flex-direction: column;
+  }
 }
 nav .navbar .nav-items {
   font-size: 1.6rem;
