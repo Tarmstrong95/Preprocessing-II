@@ -1,4 +1,17 @@
 .home {
+  @media @mobile {
+    padding: 0 2rem;
+}
+  .headhead {
+    .dashedBorder();
+    img{
+      margin-bottom: 16px;
+    }
+    h1{
+      font-size: 3.2rem;
+      margin-bottom: 13px;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,56 +19,104 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+      @media @mobile{
+        flex-direction: column;
+      }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile{
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile{
+        width: 100%;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile{
+          width: 100%;
+        }
       }
     }
   }
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    .dashedBorder();
 
+    @media @mobile{
+      flex-direction: column-reverse;
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile{
+        padding: 0;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile{
+        padding: 0;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
-    margin: 0 auto 30px;
+    margin: 0 auto 0px;
+    .dashedBorder();
+
+    @media @mobile{
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
+      padding-bottom: 30px;
     }
   }
 
   .content-pick {
     padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+
+    @media @mobile{
+      flex-direction: column;
+      align-items: center;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile{
+        width: 80%;
+      }
+    }
+
+    .btn {
+      .btnMixin();
+
+      &:hover{
+        .animMix(@eastern-blue, rgb(0, 197, 197));
+  }
     }
   }
 }// home
