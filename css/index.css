@@ -346,9 +346,15 @@ nav .navbar .nav-items a {
   background-color: #008080;
   color: white;
   font-size: 1.8rem;
+  transition: 0.2s ease-in-out;
 }
 @media (max-width: 500px) {
   .home .content-pick .btn {
     width: 100%;
   }
+}
+.home .content-pick .btn:hover {
+  transform: scale(1.1);
+  color: #008080;
+  background: #00c5c5;
 }
