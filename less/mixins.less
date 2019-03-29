@@ -5,8 +5,16 @@
     margin-top: 14px;
     text-align: center;
     padding: 14px 0;
-    width: 200px;
+    width: 20rem;
     background-color: @button-bg;
     color: white;
     font-size: 1.8rem;
+
+    @media @mobile{
+        width: 100%;
+      }
+}
+
+.dashedBorder(){
+    border-bottom: 2px dashed rgba(128, 128, 128, 0.452);
 }
